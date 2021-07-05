@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset = "utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Motors and buttons </title>
+        <link rel="1sheet" href="1.css">
+                
+<style>
+		.button
+		{
+			position: fixed;
+			width: 10%;
+			margin-left: 42.5%;
+			background: #3561c0;
+			font-weight: bolder;
+			color: white
+		}
+		.slidecontainer {
+			width: 80%;
+		}
+		.slider {
+			-webkit-appearance: none;
+			width: 25%;
+			height: 15px;
+			position: fixed;
+			margin-left: 35%;
+			border-radius: 5px;
+			background: #bbb7b7;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+		}
+		.slider:hover {
+			opacity: 1;
+		}	
+		.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #3561c0;
+			cursor: pointer;
+		}
+		.slider::-moz-range-thumb {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #3561c0;
+			cursor: pointer;
+		}
+		.NAME1 {
+				margin-left: 47%;
+		}
+		.NAME2 {
+			margin-left: 57.5%;
+		}
+		span {
+			margin-left: 40%;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="connect.php" method="POST"> 
+	<div class="slidecontainer">
+		<h1 class="NAME1">التحكم بإتجاه حركة المحركات</h1> 
+		<p class=NAME2> المحرك (1)</p><input type="range" min="0" max="360" step="90" name="motor1" class="slider" id="motor1">
+		<span id="demo1"></span>
+		<p class=NAME2> المحرك (2)</p><input type="range" min="0" max="360" step="90" name="motor2" class="slider" id="motor2">
+		<span id="demo2"></span>
+		<p class=NAME2> المحرك (3)</p><input type="range" min="0" max="360" step="90" name="motor3" class="slider" id="motor3">
+		<span id="demo3"></span>
+		<p class=NAME2> المحرك (4)</p><input type="range" min="0" max="360" step="90" name="motor4" class="slider" id="motor4">
+		<span id="demo4"></span>
+		<p class=NAME2> المحرك (5)</p><input type="range" min="0" max="360" step="90" name="motor5" class="slider" id="motor5">
+		<span id="demo5"></span>
+		<p class=NAME2> المحرك (6)</p><input type="range" min="0" max="360" step="90" name="motor6" class="slider" id="motor6">
+		<span id="demo6"></span><br><br>
+		<input class="button" type="submit" id="B1" name="save" value="حفظ"><br><br>
+		<input class="button" type="submit" id="B2" name="On" value="تشغيل" value = "1">
+	</div>
+	</form>
+
+	<script>
+		var slider = document.getElementById("motor1");
+		var output1 = document.getElementById("demo1");
+		output1.innerHTML = slider.value;
+		slider.oninput = function() {
+			output1.innerHTML = this.value;
+		}
+		var slider = document.getElementById("motor2");
+		var output2 = document.getElementById("demo2");
+		output2.innerHTML = slider.value;
+		slider.oninput = function() {
+			output2.innerHTML = this.value;
+		}
+		var slider = document.getElementById("motor3");
+		var output3 = document.getElementById("demo3");
+		output3.innerHTML = slider.value;
+		slider.oninput = function() {
+			output3.innerHTML = this.value;
+		}
+		var slider = document.getElementById("motor4");
+		var output4 = document.getElementById("demo4");
+		output4.innerHTML = slider.value;
+		slider.oninput = function() {
+			output4.innerHTML = this.value;
+		}
+		var slider = document.getElementById("motor5");
+		var output5 = document.getElementById("demo5");
+		output5.innerHTML = slider.value;
+		slider.oninput = function() {
+			output4.innerHTML = this.value;
+		}
+		var slider = document.getElementById("motor6");
+		var output5 = document.getElementById("demo6");
+		output5.innerHTML = slider.value;
+		slider.oninput = function() {
+			output5.innerHTML = this.value;
+		}
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
